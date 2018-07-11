@@ -1,12 +1,22 @@
 package pl.akademiakodu;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends JFrame {
+    //ma zawierać pytania
+    // ma zawierać 2 przyciski tak i nie
 
+    public Main(){
+        super("Milionerzy"); //Ustawia tytuø okna
+        setSize(500,500); // Ustawia wielkość okna
+        setDefaultCloseOperation(1); // Sprawia że  działa przycisk exit
+        setVisible(true); //Sprawia, że widać okno
+    }
     public static void main(String[] args) {
+        Main main = new Main();
         List<Question> questionList = new ArrayList<>();
 
         questionList.add(new Question("Czy Polska leży w Europie", true));
